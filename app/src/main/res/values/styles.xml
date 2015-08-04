@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.DeviceDefault">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="LandscapingFormTitle">
+        <item name="android:textSize">@dimen/form_title_text_size</item>
+        <item name="android:padding">@dimen/form_title_text_padding</item>
+        <item name="android:textColor">@color/app_title_gray</item>
+    </style>
+
+    <dimen name="form_title_text_padding">8dp</dimen>
+</resources>
