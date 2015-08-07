@@ -1,11 +1,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:gravity="center"
     tools:context=".SplashActivity">
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/microsoft_landscaping"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/konnect_logo" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="Konnekt"
+            android:textColor="@color/app_title"
+            android:textSize="36sp" />
+    </LinearLayout>
 
 </RelativeLayout>

@@ -1,5 +1,7 @@
 package com.desitum.landscape_connect.activities;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,12 +10,38 @@ import android.view.MenuItem;
 import com.desitum.landscape_connect.R;
 
 
-public class SplashActivity extends ActionBarActivity {
+public class SplashActivity extends Activity {
+
+    private boolean dataHasLoaded;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        if (getActionBar() != null) getActionBar().hide();
+
+        Runnable myRunnable = new Runnable() {
+            @Override
+            public void run() {
+                while (!dataHasLoaded) {
+                    // TODO need to load data from Spring Boot api call
+                    try {
+                        Thread.sleep(1000);
+                        dataHasLoaded = true;
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                Intent myIntent = new Intent(getBaseContext(), LoginActivity.class);
+                startActivity(myIntent);
+
+            }
+        };
+
+        Thread myThread = new Thread(myRunnable);
+        myThread.start();
     }
 
     @Override

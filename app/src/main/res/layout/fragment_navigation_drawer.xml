@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:choiceMode="singleChoice"
+    android:divider="@android:color/transparent" android:dividerHeight="0dp"
+    tools:context="com.desitum.landscape_connect.activities.NavigationDrawerFragment"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <com.desitum.landscape_connect.views.CircularImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/icon_password"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Android"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/navigation_drawer_list"
+        android:background="#cccc" />
+</LinearLayout>

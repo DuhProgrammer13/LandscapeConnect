@@ -2,51 +2,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_background"
     tools:context="com.desitum.landscape_connect.fragments.LoginActivityFragment">
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/microsoft_landscaping" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
             android:orientation="vertical">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="24dp"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center_horizontal"
-                    android:text="Landscape Connect"
-                    android:textSize="40sp"
-                    android:textColor="@color/app_title_gray"/>
-            </FrameLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="48dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_margin="24dp"
+                    android:background="@drawable/konnect_logo" />
 
                 <TextView
+                    android:id="@+id/title"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="Konnekt"
+                    android:textColor="@color/app_title"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    style="@style/LandscapingFormTitle"
-                    android:text="@string/dummy_text"/>
-            </LinearLayout>
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp">
+
+                            <View
+                                android:id="@+id/username_icon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginRight="8dp"
+                                android:background="@drawable/icon_username" />
+
+                            <EditText
+                                android:id="@+id/username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/invisible"
+                                android:gravity="center"
+                                android:inputType="textEmailAddress"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@color/white" />
+
+                    <RelativeLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp">
+
+                            <View
+                                android:id="@+id/password_icon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginRight="8dp"
+                                android:background="@drawable/icon_password" />
+
+                            <EditText
+                                android:id="@+id/password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/invisible"
+                                android:gravity="center"
+                                android:inputType="textPassword" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:layout_marginBottom="24dp"/>
+
+                    <Button
+                        android:id="@+id/login_button"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="Log In"
+                        android:background="@drawable/login_button"
+                        android:layout_marginBottom="24dp"
+                        android:onClick="onClickLogin" />
+
+
+                    <RelativeLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/forgot_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Forgot your password?" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
-
 </RelativeLayout>
 

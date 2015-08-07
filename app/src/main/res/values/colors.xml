@@ -2,6 +2,10 @@
 <resources>
     <color name="white">#fff</color>
     <color name="black">#000</color>
-    <color name="app_title_gray">#333</color>
+    <color name="app_title">@color/white</color>
     <color name="slight_transparent_white">#f5ffffff</color>
+    <color name="spacer_color">#f0f0f0</color>
+    <color name="invisible">#0fff</color>
+    <color name="login_button_up">#5333</color>
+    <color name="login_button_down">#7222</color>
 </resources>
